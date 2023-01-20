@@ -79,8 +79,7 @@ public class payment {
 					Thread.sleep(4000);
 					// click on submit button
 					driver.findElement(By.xpath("//div[@class='order-history-comments-actions actions']/button"))
-							.click();
-					
+							.click();					
 				}
 			// click on back
 			Thread.sleep(3000);
