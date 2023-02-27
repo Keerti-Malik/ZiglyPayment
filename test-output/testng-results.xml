@@ -2,19 +2,24 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-30T11:53:17Z" name="Default suite" finished-at="2023-01-30T12:19:06Z" duration-ms="1548380">
+  <suite started-at="2023-02-27T08:33:27Z" name="Default suite" finished-at="2023-02-27T08:36:29Z" duration-ms="181500">
     <groups>
     </groups>
-    <test started-at="2023-01-30T11:53:17Z" name="Default test" finished-at="2023-01-30T12:19:06Z" duration-ms="1548380">
-      <class name="payment">
-        <test-method signature="readdata()[pri:0, instance:payment@68c9133c]" started-at="2023-01-30T11:53:17Z" name="readdata" finished-at="2023-01-30T12:19:06Z" duration-ms="1548353" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+    <test started-at="2023-02-27T08:33:27Z" name="Default test" finished-at="2023-02-27T08:36:29Z" duration-ms="181500">
+      <class name="CustomerMapping">
+        <test-method signature="readdata()[pri:0, instance:CustomerMapping@68c9133c]" started-at="2023-02-27T08:33:27Z" name="readdata" finished-at="2023-02-27T08:36:29Z" duration-ms="181471" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
-              <![CDATA[Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null]]>
+              <![CDATA[Index 20 out of bounds for length 20]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null
-at payment.readdata(payment.java:59)
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 20 out of bounds for length 20
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at CustomerMapping.readdata(CustomerMapping.java:36)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -40,11 +45,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readdata -->
-      </class> <!-- payment -->
+      </class> <!-- CustomerMapping -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
